@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">MoviesList</string>
+
+    <string name="movies">Movies</string>
+
+    <string name="release_date">Release Date: %s</string>
+    <string name="language">Language: %s</string>
+    <string name="genres">Genres: </string>
+
+    <string name="retry">Try again</string>
+    <string name="loading">Problem with loading</string>
+    <string name="loading_text">Problem with loading movies please try again later</string>
+</resources>

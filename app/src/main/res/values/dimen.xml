@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="bottom_margin_item">14dp</dimen>
+    <dimen name="text_size_item">18sp</dimen>
+
+
+    <dimen name="top_margin_detail">14dp</dimen>
+    <dimen name="side_margin">8dp</dimen>
+    <dimen name="text_size_title_detail">24sp</dimen>
+    <dimen name="text_size_overview_detail">18sp</dimen>
+    <dimen name="text_size_release_detail">18sp</dimen>
+    <dimen name="text_size_language_detail">18sp</dimen>
+    <dimen name="text_size_genre_detail">20sp</dimen>
+</resources>

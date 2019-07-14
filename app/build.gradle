@@ -1,0 +1,91 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-kapt'
+
+android {
+    defaultConfig {
+        applicationId "com.example.movieslist"
+        compileSdkVersion Android.compileSdkVersion
+        minSdkVersion Android.minSdkVersion
+        targetSdkVersion Android.targetSdkVersion
+        versionCode Android.versionCode
+        versionName Android.versionName
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility = '1.8'
+        targetCompatibility = '1.8'
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    api SupportLibraries.appCompat
+    api SupportLibraries.design
+    api SupportLibraries.recyclerView
+    api SupportLibraries.support
+    api SupportLibraries.cardView
+    api SupportLibraries.core
+
+    implementation Lifecycle.viewModel
+    implementation Lifecycle.extension
+
+    //JSON parsing
+    api Retrofit.retrofit
+    api Retrofit.rxjavaRetrofit
+    api Retrofit.retrofitConverter
+    api Retrofit.gson
+
+    api Glide.glide
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    kapt Glide.glideCompiler
+    api Glide.glideIntegration
+
+    // Room
+    api Room.roomRuntime
+    kapt Room.roomCompiler
+    api Room.roomRxjava
+    api Room.roomQuava
+    testImplementation TestingLibraries.roomTest
+
+    // RxJava
+    api Rxjava.rxAndroid
+    api Rxjava.rxJava
+    api Rxjava.rxBinding
+    api Lifecycle.reactiveStreams
+
+    // Kotlin
+    api Kotlin.kotlin
+
+    //DI
+    api Koin.koinAndroid
+    api Koin.koinScope
+    api Koin.koinViewModel
+
+    implementation Paging.paging
+    implementation Paging.rxPaging
+
+    //Dagger 2
+    implementation Dagger2.dagger
+    kapt Dagger2.daggerCompiler
+    compileOnly Dagger2.javaxAnnotation
+
+    testImplementation TestingLibraries.junit
+    androidTestImplementation TestingLibraries.testRunner
+    androidTestImplementation TestingLibraries.espressoCore
+}
